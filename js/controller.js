@@ -2,15 +2,21 @@ angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
         $scope.title = 'Welcome To Angular Todo! :) It gets better, honest!!';
     })
-    .controller('RegisterController', function($scope, $location, UserAPIService) {
+    .controller('RegisterController', function($scope, $location, UserAPIService, store) {
         
+        store.remove("testObject")
         $scope.registrationUser = {};
         var URL = "https://morning-castle-91468.herokuapp.com/";
         
+       
+        
         $scope.login=function(){
             UserAPIService.callAPI(URL + "accounts/api-token-auth/", $scope.data).then(function(results){
-            $scope.token = results.data.token;
-              console.log($scope.token);
+            // can use vanilla javascript rather than load a library
+            // store.set("username", $scope.registrationUser.username);
+            // store.set("authToken", results.data.token);
+            localStorage.setItem("username", $scope.registrationUser.username);
+            localStorage.setItem("authToken", results.data.token);
         }).catch(function(err){
             console.log(err.data);
         });
