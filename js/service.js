@@ -16,7 +16,7 @@ angular.module('TodoService', [])
                 var header="Authorization: JWT " + token;
                 return $http.get(url, {params:{"username":data}}, header);
             },
-            createToDo: function(url, data, token){
+            createTodo: function(url, data, token){
                 var header="Authorization: JWT " + token;
                 return $http.post(url, data, header);
             },
