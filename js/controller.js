@@ -2,9 +2,10 @@ angular.module("RouteControllers", [])
     .controller("HomeController", function($scope) {
         $scope.title = "Welcome To Angular Todo! :) It gets better, honest!!";
     })
-    .controller("RegisterController", function($scope) {
+    .controller("RegisterController", function($scope, UserAPIService) {
         
         $scope.registrationUser = {}
+        var URL="https://morning-castle-91468.herokuapp.com/"
         
         $scope.submitForm = function() {
             if ($scope.registrationForm.$valid) {
