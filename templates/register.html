@@ -10,7 +10,7 @@
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control" data-ng-model="user.password" reqruired />
-                <span ng-show="registrationForm.password.$pristine" class="help-block">Your password is required</p>
+                <span ng-show="registrationForm.password.$invalid" class="help-block">Your password is required</p>
             </div>
             
             <button type="submit" class="btn btn-primary" data-ng-disabled="registrationForm.$invalid">Register</button>

@@ -1,6 +1,6 @@
-angular.module('MyApp',['ngRoute', 'RouteControllers', 'UserService' ]);
+angular.module('TodoApp',['ngRoute', 'RouteControllers', 'UserService']);
 
-angular.module('MyApp').config(function($locationProvider, $routeProvider) { $locationProvider.html5Mode(true);
+angular.module('TodoApp').config(function($locationProvider, $routeProvider) { $locationProvider.html5Mode(true);
     
     $routeProvider.when('/', {
         templateUrl: 'templates/home.html',

@@ -1,8 +1,8 @@
-angular.module("UserService", [])
-    .factory("UserAPIService", function($http){
+angular.module('UserService', [])
+    .factory('UserAPIService', function($http){
         
         UserAPIService={
-            registerUser: function(url, data){
+                callAPI: function(url, data){
                 return $http.post(url, data);
             }
         };
