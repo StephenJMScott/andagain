@@ -13,6 +13,17 @@ angular.module("RouteControllers", [])
                 $scope.registrationUser.password = $scope.user.password;
             }
             
-            console.log($scope.registrationUser.username + " " + $scope.registrationUser.password);
+            UserAPIService.registerUser(URL + "accounts/register/", $scope.registrationUser).then(function(results){
+                $scope.data;
+                alert("Yay! You have successfully registered!!");
+            }).catch(function(err){
+                alert("Oh No! Someone must have that name already!");
+                console.log(err);
+            });
+            
+            
+            /*this part was removed after adding the API*/
+            // console.log($scope.registrationUser.username + " " + $scope.registrationUser.password);
+            
         }
     });

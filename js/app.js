@@ -1,4 +1,4 @@
-angular.module('MyApp',['ngRoute', 'RouteControllers']);
+angular.module('MyApp',['ngRoute', 'RouteControllers', 'UserService' ]);
 
 angular.module('MyApp').config(function($locationProvider, $routeProvider) { $locationProvider.html5Mode(true);
     
