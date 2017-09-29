@@ -1,7 +1,7 @@
 angular.module("TodoDirective", [])
     .directive("todoTable", function(){
         return{
-            restrict: "E",
+            restrict: "EA",
             templateUrl: "templates/directives/todo-table.html"
         };
     });

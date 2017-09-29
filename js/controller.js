@@ -4,7 +4,7 @@ angular.module('RouteControllers', [])
     })
     .controller('RegisterController', function($scope, $location, UserAPIService, store) {
         
-        store.remove("testObject");
+        
         $scope.registrationUser = {};
         var URL = "https://morning-castle-91468.herokuapp.com/";
         
