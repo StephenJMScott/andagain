@@ -5,3 +5,4 @@ angular.module("TodoDirective", [])
             templateUrl: "templates/directives/todo-table.html"
         };
     });
+    
